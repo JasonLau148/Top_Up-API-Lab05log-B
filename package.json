@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@types/koa": "^2.13.5",
+    "@types/koa-bodyparser": "^4.3.10",
     "koa": "^2.14.1",
     "koa-bodyparser": "^4.3.0",
     "koa-compose": "^4.1.0",
