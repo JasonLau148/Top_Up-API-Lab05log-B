@@ -56,7 +56,7 @@ const deleteArticle = async (ctx: RouterContext, next: any) => {
   let id = +ctx.params.id;
 
   if ((id < articles.length + 1) && id > 0) {
-    articles.splice(id, 1);
+    articles.splice((id-1), 1);
     ctx.status = 201;
     ctx.body = articles;
   } else {
