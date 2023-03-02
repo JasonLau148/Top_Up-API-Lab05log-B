@@ -3,7 +3,7 @@ import Koa from "koa";
 import logger from "koa-logger";
 import json from "koa-json";
 
-import {router as articles} from "./routes/articles";
+import { router as articles } from "./routes/articles";
 
 const app: Koa = new Koa();
 // const router: Router = new Router();
@@ -21,5 +21,5 @@ app.use(logger());
 app.use(articles.routes());
 
 app.listen(3306, () => {
- console.log("Koa Started");
+  console.log("Koa Started");
 })
