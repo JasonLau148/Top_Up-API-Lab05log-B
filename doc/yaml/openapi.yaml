@@ -1,0 +1,61 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Back End Demonstration API
+  description: A simple blog API.
+  contact: 
+    name: Jason Lau
+    email: 227007987@stu.vtc.edu.hk
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+servers:
+  - url: 'https://TopUp-API-Lab05log-B.laujason.repl.co'
+    description: Development Server
+tags:
+  - name: users
+    description: API endpoints for user management
+  - name: Articles
+    description: Access and perform CRUD operations on blog entries
+paths:
+  /articles/{id}:
+    get:
+      tags:
+        - Articles
+      description:
+        Get article by id.
+      responses:
+        '200':
+          description: View of an article record
+        '404':
+          description: Article was not found in the DB
+    post:
+      tags:
+        - Articles
+      description:
+        Post article by id.
+      responses:
+        '200':
+          description: Update designated article successfully
+        '404':
+          description: Article was not found in the DB
+    put:
+      tags:
+        - Articles
+      description:
+        Put article by id.
+      responses:
+        '200':
+          description: Update designated article successfully
+        '404':
+          description: Article was not found in the DB
+    delete:
+      tags:
+        - Articles
+      description:
+        Delete article by id.
+      responses:
+        '200':
+          description: Delete designated article record
+        '404':
+          description: Article was not found in the DB
